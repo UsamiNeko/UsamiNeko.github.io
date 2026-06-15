@@ -45,6 +45,21 @@
     
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
 
+    <style>
+/* 块级公式容器 */
+.katex-display { position: relative; }
+/* 宽度限制仅作用于块级公式，不干扰行内公式 */
+.katex-display > .katex { width: calc(100% - 2px); }
+/* 公式内无多余内边距 */
+.katex-html { padding: 0 !important; }
+/* 带标签的公式不用 flex 布局，避免被等号切分的多个 .base 散开 */
+.katex-html:has(span.tag) { display: block !important; }
+/* 标签用绝对定位放在右侧 */
+.katex-display>.katex>.katex-html>.tag { position: absolute !important; right: 0; float: none !important; margin-left: 0 !important; }
+/* 公式基线上居中 */
+.katex-html .base { margin: 0 auto; }
+</style>
+
 <meta name="generator" content="Hexo 8.1.2"></head>
 
   <body>
@@ -288,7 +303,7 @@
             <li class="archive-article">
   <div class="archive-article-date">
     <span>
-      <time class="dt-published" datetime="2026-06-15T11:39:43.908Z" itemprop="datePublished">06-15</time>
+      <time class="dt-published" datetime="2026-06-15T11:45:51.399Z" itemprop="datePublished">06-15</time>
     </span>
   </div>
     <a class="archive-article-title" href="/2026/06/15/hello-world/">Hello World</a>
