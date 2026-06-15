@@ -1420,6 +1420,7 @@ button {
   margin: 0 auto;
 }
 .katex-display {
+  position: relative;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -1433,12 +1434,11 @@ button {
   margin: 0 auto;
 }
 .katex-html:has(span.tag) {
-  display: flex !important;
+  display: block !important;
 }
 .katex-display>.katex>.katex-html>.tag {
-  position: relative !important;
-  float: right;
-  margin-left: 0.25rem;
+  position: absolute !important;
+  right: 0;
 }
 .post-link {
   position: absolute;
