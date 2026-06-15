@@ -1420,25 +1420,28 @@ button {
   margin: 0 auto;
 }
 .katex-display {
-  position: relative;
   overflow-x: auto;
   overflow-y: hidden;
 }
 .katex-display::-webkit-scrollbar {
   display: none;
 }
-.katex-display > .katex {
+.katex {
   width: calc(100% - 2px);
+}
+.katex-html {
+  padding: 4px;
 }
 .katex-html .base {
   margin: 0 auto;
 }
 .katex-html:has(span.tag) {
-  display: block !important;
+  display: flex !important;
 }
 .katex-display>.katex>.katex-html>.tag {
-  position: absolute !important;
-  right: 0;
+  position: relative !important;
+  float: right;
+  margin-left: 0.25rem;
 }
 .post-link {
   position: absolute;
